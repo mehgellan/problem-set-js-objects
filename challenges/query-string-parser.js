@@ -45,3 +45,9 @@
 */
 
 // YOUR CODE HERE
+
+function parseQueryString(string) {
+  var data = {};
+  var keyPairArray = string.split('&');
+  console.log(keyPairArray);
+}

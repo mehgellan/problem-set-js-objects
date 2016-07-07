@@ -44,7 +44,7 @@ function letterCount(string) {
   for (var i = 0; i <= sortedArray.length; i++) {
     if (sortedArray[i] != currentLetter) {
       if (letterFreq > 0) {
-        console.log(currentLetter + ' : ' + letterFreq);
+        console.log(currentLetter + ' : ' + letterFreq/sortedArray.length);
       }
       currentLetter = sortedArray[i];
       letterFreq = 1;
