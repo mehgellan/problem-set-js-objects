@@ -31,3 +31,23 @@
 */
 
 // YOUR CODE HERE
+
+
+var letterObject = {};
+
+function letterCount(string) {
+  var arrayOfLetters = string.split('');
+
+  var copy = arrayOfLetters.slice(0);
+  console.log(copy + "= a copy");
+  for (var i = 0; i < arrayOfLetters.length; i++) {
+    var counter = 0;
+    for (var x = 0; x < copy.length; x++) {
+      if (arrayOfLetters[i]===copy[x]) {
+        counter++;
+        console.log(counter);
+      }
+    }
+  }
+
+}
