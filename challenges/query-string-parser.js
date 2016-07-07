@@ -46,8 +46,14 @@
 
 // YOUR CODE HERE
 
+// start by splitting at the &, not the = so the key-value pairs are together
+
 function parseQueryString(string) {
   var data = {};
   var keyPairArray = string.split('&');
-  console.log(keyPairArray);
+  keyPairArray.forEach(function(element) {
+    var elementArray = element.split('=');
+    data[elementArray[0]] = elementArray[1];
+  });
+  return data;
 }

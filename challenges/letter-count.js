@@ -32,26 +32,36 @@
 
 // YOUR CODE HERE
 
-
-var letterObject = {};
+// function letterCount(string) {
+//   var arrayOfLetters = string.split('');
+//   var sortedArray = arrayOfLetters.sort();
+//
+//   var currentLetter = null;
+//   var letterFreq = 0;
+//   for (var i = 0; i <= sortedArray.length; i++) {
+//     if (sortedArray[i] != currentLetter) {
+//       if (letterFreq > 0) {
+//         console.log(currentLetter + ' : ' + letterFreq/sortedArray.length);
+//       }
+//       currentLetter = sortedArray[i];
+//       letterFreq = 1;
+//     } else {
+//       letterFreq++;
+//     }
+//   }
+//
+//
+// }
 
 function letterCount(string) {
   var arrayOfLetters = string.split('');
-  var sortedArray = arrayOfLetters.sort();
-
-  var currentLetter = null;
-  var letterFreq = 0;
-  for (var i = 0; i <= sortedArray.length; i++) {
-    if (sortedArray[i] != currentLetter) {
-      if (letterFreq > 0) {
-        console.log(currentLetter + ' : ' + letterFreq/sortedArray.length);
-      }
-      currentLetter = sortedArray[i];
-      letterFreq = 1;
+  var letterFreqObj = {};
+  arrayOfLetters.forEach(function(element) {
+    if (letterFreqObj[element]) {
+      letterFreqObj[element]++;
     } else {
-      letterFreq++;
+      letterFreqObj[element] = 1;
     }
-  }
-
-
+  });
+  return letterFreqObj;
 }
