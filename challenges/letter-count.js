@@ -37,17 +37,21 @@ var letterObject = {};
 
 function letterCount(string) {
   var arrayOfLetters = string.split('');
+  var sortedArray = arrayOfLetters.sort();
 
-  var copy = arrayOfLetters.slice(0);
-  console.log(copy + "= a copy");
-  for (var i = 0; i < arrayOfLetters.length; i++) {
-    var counter = 0;
-    for (var x = 0; x < copy.length; x++) {
-      if (arrayOfLetters[i]===copy[x]) {
-        counter++;
-        console.log(counter);
+  var currentLetter = null;
+  var letterFreq = 0;
+  for (var i = 0; i <= sortedArray.length; i++) {
+    if (sortedArray[i] != currentLetter) {
+      if (letterFreq > 0) {
+        console.log(currentLetter + ' : ' + letterFreq);
       }
+      currentLetter = sortedArray[i];
+      letterFreq = 1;
+    } else {
+      letterFreq++;
     }
   }
+
 
 }
