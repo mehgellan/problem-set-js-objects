@@ -41,3 +41,23 @@ function daysBetweenDate(string) {
   var diff = Math.floor((currentDate - dateToCheck)/86400000);
   return diff;
 }
+
+function birthdayReminder(arrayOfObjects) {
+  // var days = Math.floor(start.getTime() - now.getTime()/86400000);
+
+  arrayOfObjects.forEach(function(element) {
+    var bday = new Date(element.dob);
+    var bdayTime = bday.getTime();
+    console.log("bdayTime= " + bdayTime);
+    var now = new Date();
+    var nowTime = now.getTime();
+    console.log("nowTime= " + nowTime);
+    var days = Math.floor(bdayTime - nowTime/86400000);
+    console.log("days= " + days);
+    var daysLeft = days%365;
+    console.log("daysLeft= " + daysLeft);
+    var statement = element.name + "'s birthday is in " + daysLeft + " days";
+    console.log(statement);
+    // console.log(element.dob);
+  });
+}
