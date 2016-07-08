@@ -40,9 +40,16 @@
 // YOUR CODE HERE
 
 function pingPong(array) {
-  array.forEach(function(element) {
-    if (element===Object.typeof()) {
-      
+  var table = [{steps: 0}, null, null, null];
+  array.forEach(function(element,index) {
+    // console.log(element);
+    if (element) {
+      element.steps++;
+      array[index+1] = array[element];
+      // console.log(element.steps);
+      console.log(element);
+    } else {
+      console.log(false);
     }
   });
 }
