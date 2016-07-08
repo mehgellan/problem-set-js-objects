@@ -54,7 +54,7 @@ function birthdayReminder(arrayOfObjects) {
     console.log("nowTime= " + nowTime);
     var days = Math.floor(bdayTime - nowTime/86400000);
     console.log("days= " + days);
-    var daysLeft = days%365;
+    var daysLeft = days/365;
     console.log("daysLeft= " + daysLeft);
     var statement = element.name + "'s birthday is in " + daysLeft + " days";
     console.log(statement);

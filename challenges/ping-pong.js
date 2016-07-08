@@ -38,3 +38,11 @@
 */
 
 // YOUR CODE HERE
+
+function pingPong(array) {
+  array.forEach(function(element) {
+    if (element===Object.typeof()) {
+      
+    }
+  });
+}
