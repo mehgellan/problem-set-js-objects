@@ -38,14 +38,13 @@
 */
 
 // YOUR CODE HERE
-
+var table = [{steps: 0}, null, null, null];
 function pingPong(array) {
-  var table = [{steps: 0}, null, null, null];
   array.forEach(function(element,index) {
     // console.log(element);
     if (element) {
       element.steps++;
-      array[index+1] = array[element];
+      array[index+1] = element;
       // console.log(element.steps);
       console.log(element);
     } else {
