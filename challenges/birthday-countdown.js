@@ -34,3 +34,10 @@
 */
 
 // YOUR CODE HERE
+
+function daysBetweenDate(string) {
+  var dateToCheck = new Date(string);
+  var currentDate = new Date();
+  var diff = Math.floor((currentDate - dateToCheck)/86400000);
+  return diff;
+}

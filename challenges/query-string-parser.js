@@ -57,3 +57,9 @@ function parseQueryString(string) {
   });
   return data;
 }
+
+function convertToQueryParameter(obj) {
+  var convertedArray = $.map(obj, function(key){
+
+  });
+}
